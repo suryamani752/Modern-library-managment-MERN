@@ -8,8 +8,8 @@ import BooksCatalogue from './components/BooksCatalogue';
 import HistoryGrid from './components/HistoryGrid';
 import { IssuedBooks } from './components/Issued';
 import { RequestBook } from './components/RequestBook';
-// import { RequestStatus } from './components/requestStatus';
-// import { SearchBook } from './components/searchBook';
+import { RequestStatus } from './components/requestStatus';
+import { SearchBook } from './components/searchBook';
 import { AuthContext, AuthProvider } from './context/authProvider';
 import { RequestedBooks } from './screens/admin/requestedBooks';
 import { UpdateBook } from './screens/admin/updateBook';
@@ -47,10 +47,10 @@ function App() {
                   <Route path="issuedBooks" element={<IssuedBooks />} />
                   <Route path="viewBooks" element={<BooksCatalogue />} />
                   <Route path="viewBooks/bookDetails" element={<BookDetails />} />
-                  {/* <Route path="viewBooks/search" element={<SearchBook />} /> */}
+                  <Route path="viewBooks/search" element={<SearchBook />} />
                   <Route path="requestBook" element={<RequestBook />} />
                   <Route path="read" element={<HistoryGrid />} />
-                  {/* <Route path="requestStatus" element={<RequestStatus />} /> */}
+                  <Route path="requestStatus" element={<RequestStatus />} />
                 </Route>
                 
               </>
@@ -60,7 +60,7 @@ function App() {
                     <Route path="/dashboard" element={<Navigate replace to="/dashboard/viewBooks" />} />
                     <Route path="viewBooks" element={<BooksCatalogue />} />
                     <Route path="viewBooks/bookDetails" element={<BookDetails />} />
-                    {/* <Route path="viewBooks/search" element={<SearchBook />} /> */}
+                    <Route path="viewBooks/search" element={<SearchBook />} />
 
                     <Route path="addBook" element={<AddBook />} />
                     <Route path="viewBooks/updateBook" element={<UpdateBook />} />
