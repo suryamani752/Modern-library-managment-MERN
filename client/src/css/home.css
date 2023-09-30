@@ -6,19 +6,16 @@
     position: relative;
 }
 .inner-div-1{
-    /* background-color: rgb(251, 249, 227); */
     background-color: rgb(81, 65, 43);
     width: 70%;
     height: 100%;
     display: inline-block;
-    /* opacity: 0; */
 }
 .inner-div-2{
     background-color: #121314f3;
     width: 30%;
     height: 100%;
     display: inline-block;
-    /* opacity: 0; */
 }
 .img-container{
     position: absolute;
@@ -30,15 +27,12 @@
     height: 84%;
     border-radius: 0.5rem;
     opacity: 0.95;
-    /* background-color:palevioletred; */
 }
 .quote-text{
-    /* position: fixed; */
-    /* right: 10px; */
+    
     width: 40%;
     height: 100%;
     transform: translateX(700px);
-    /* background-color:lightcyan; */
     text-align: right;
     font-style: italic;
     padding: 1.5rem 3.5rem;
@@ -60,9 +54,7 @@
     color: white;
 }
 .quote-text p{
-    /* font-family: 'Mukta', sans-serif !important; */
     font-family: 'Cormorant Garamond', serif;
-    /* font-family: 'Amiri', serif !important; */
 }
 .quote-text2 p{
     font-family: 'Inconsolata', monospace !important;

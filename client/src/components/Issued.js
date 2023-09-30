@@ -9,11 +9,8 @@ import noDataImg from "../images/bookheaders/norecordfound.png";
 import MediaControlCard from "./MUIcard";
 
 export const IssuedBooks = () => {
-  // const { addToast } = useToasts();
   const navigate = useNavigate();
-  // const books = [{ "_id": { "$oid": "6245cc6cea525e229c4cef5e" }, "image": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7807/9781780722405.jpg", "name": "The 8-week Blood Sugar Diet", "author": "Michael Mosley", "book_depository_stars": { "$numberInt": "4" }, "isbn": { "$numberLong": "9781780722405" }, "category": "Medical", "copies": "5" }]
-  // const books = null;
-
+  
   //returns the current date
   const getDate = () => {
     const d = new Date();
@@ -45,12 +42,9 @@ export const IssuedBooks = () => {
       list.splice(index, 1);
       setIssue(list);
     }
-    //  await returnBooks(book);
   };
 
-  // const issueList = issue.map((book) =>
-  //     <MediaControlCard data={book} returnFn={returnbtn} key={book._id} />
-  // )
+  
 
   return (
     <>

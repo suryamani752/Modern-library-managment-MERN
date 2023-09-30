@@ -8,8 +8,7 @@ import "../css/sidebar.css";
 export const Sidebar = () => {
   const { role, setToken, setRole } = useContext(AuthContext);
   const navigate = useNavigate();
-  // const logoutClass = "logout";
-  // const { addToast } = useToasts();
+ 
 
   const logout = () => {
     sessionStorage.removeItem("token");
@@ -17,14 +16,11 @@ export const Sidebar = () => {
     setToken("");
     setRole("");
     toast.success("Logged out successfully");
-    // addToast('Logged out successfully', { appearance: 'success' });
   };
 
   return (
     <>
-      {/* <script src="https://kit.fontawesome.com/b99e675b6e.js"></script> */}
 
-      {/* <div className="wrapper"> */}
       <div className="sidebar">
         <h3>Dashboard</h3>
         <hr
@@ -37,8 +33,7 @@ export const Sidebar = () => {
 
         {role === "user" ? (
           <ul>
-            {/* <li><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/dashboard/home"> Home</NavLink></li> */}
-            {/* <li><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/dashboard/profile"> Profile</NavLink></li> */}
+            
             <li>
               <NavLink
                 className={({ isActive }) => (isActive ? "active" : "")}
@@ -84,9 +79,7 @@ export const Sidebar = () => {
                 History
               </NavLink>
             </li>
-            {/* <li><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/dashboard/recommendations"> Recommendations</NavLink></li> */}
-            {/* <li><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/dashboard/pendingDues"> Pending Dues</NavLink></li> */}
-            {/* <li><div className='user'><img src={userImg} /></div><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="#"> Logout</NavLink></li> */}
+            
           </ul>
         ) : role === "admin" ? (
           <>
@@ -122,13 +115,11 @@ export const Sidebar = () => {
           </>
         ) : (
           <>
-            {/* to navigate to login if a user tries to access the previous/next page after logout */}
             {navigate("/libmngsystem")}
           </>
         )}
 
         <div className="logoutDiv">
-          {/* <div className='user'></div> */}
           <LogoutIcon sx={{ color: "white", fontSize: 29 }} />
           <NavLink className="logout" to="/" onClick={logout}>
             {" "}
@@ -136,7 +127,6 @@ export const Sidebar = () => {
           </NavLink>
         </div>
       </div>
-      {/* </div> */}
     </>
   );
 };

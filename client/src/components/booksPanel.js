@@ -27,23 +27,19 @@ export const BooksPanel = (props) => {
     },
   };
 
-  // console.log(props.data);
   const bookList = props.data.map((book, index) => (
     <CustomCard details={book} key={index} />
   ));
 
   return (
     <>
-      {/* MUI category card */}
       <Card
         sx={{ maxWidth: 180, maxHeight: 55, marginTop: 2, marginBottom: 0 }}
       >
         <CardMedia
           component="img"
           height="12"
-          // sx={{ margin: 0, padding: 0 }}
-          // image="/static/images/cards/contemplative-reptile.jpg"
-          // alt="green iguana"
+          
           image={props.panelBanner}
         />
         <CardContent>
@@ -68,7 +64,6 @@ export const BooksPanel = (props) => {
               swipeable={false}
               autoPlay={false}
               autoPlaySpeed={100000}
-              // infinite={true}
               partialVisible={false}
               centerMode={false}
             >

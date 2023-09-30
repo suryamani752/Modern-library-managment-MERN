@@ -17,17 +17,16 @@ const dueDate = () => {
   const targetDate = new Date();
   targetDate.setDate(targetDate.getDate() + 14);
   var dd = targetDate.getDate();
-  var mm = targetDate.getMonth() + 1; // 0 is January, so we must add 1
+  var mm = targetDate.getMonth() + 1; 
   var yyyy = targetDate.getFullYear();
 
-  var dateString = `${dd}-${mm}-${yyyy}`;
+  var dateString = `${dd}/${mm}/${yyyy}`;
   return dateString;
 };
 
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(sessionStorage.getItem("token"));
-  // const token = localStorage.getItem('token');
-  // const role = localStorage.getItem('role');
+  
   const [role, setRole] = useState(sessionStorage.getItem("role"));
 
   const [issue, setIssue] = useState([]);
@@ -68,9 +67,7 @@ export const AuthProvider = ({ children }) => {
           Authorization: `Bearer ${token}`,
         },
       });
-      //   dispatch({type:'get_books',payload:response.data})
-      // console.log(response);
-      // console.log(response.data);
+      
 
       if (id === "Classics") {
         setClassics(response.data);
@@ -114,20 +111,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // const returnBooks=async(Book)=>{
-  //     try{
-  //         await axios.post('/returned-books',JSON.stringify({Name:Book.Name,author:Book.author,isbn:Book.isbn,issuedOn:Book.IssuedOn,returnedOn:'1'}),
-  //         {
-  //             headers:{
-  //             Authorization:`Bearer ${token}`}
-  //           })
-  //     }
-  //     catch(e){
-  //         console.log(e.data);
-  //         console.log(e);
-  //     }
-  // }
-
+ 
   const getReturnBooks = async () => {
     try {
       const response = await axios.get("/getreturnbooks", {
@@ -174,7 +158,6 @@ export const AuthProvider = ({ children }) => {
         },
       });
       setResults(response.data);
-      // console.log(results.length);
     } catch (e) {
       console.log(e);
     }
@@ -193,18 +176,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // const deletereq = async (book) => {
-  //     try {
-  //         await axios.post('/deletereq', JSON.stringify({ name: book.name }), {
-  //             headers: {
-  //                 Authorization: `Bearer ${token}`
-  //             }
-  //         })
-  //     }
-  //     catch (e) {
-  //         console.log(e);
-  //     }
-  // }
+ 
 
   const getUserRequests = async () => {
     try {
@@ -250,50 +222,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // const getBookFine = async (isbn) => {
-  //     try {
-  //         const response = await axios.get(`/getbookfine/${isbn}`, {
-  //             headers: {
-  //                 Authorization: `Bearer ${token}`
-  //             }
-  //         })
-  //         setBookFine(response.data[0].fine);
-  //         console.log("book fine = " + response.data[0].fine);
-  //     }
-  //     catch (e) {
-  //         console.log(e);
-  //     }
-  // }
-
-  // const updateUserFine = async (newBookFine) => {
-  //     try {
-  //         await axios.post('/updateUserFine', JSON.stringify({ updatefine: newBookFine }), {
-  //             headers: {
-  //                 Authorization: `Bearer ${token}`
-  //             }
-  //         })
-  //         console.log("user fine updated");
-  //     }
-
-  //     catch (e) {
-  //         console.log(e);
-  //     }
-  // }
-
-  // const updateBookFine = async (isbn, fine) => {
-  //     try {
-  //         await axios.post('/updatebookfine', JSON.stringify({ isbn, updatedFine: fine }), {
-  //             headers: {
-  //                 Authorization: `Bearer ${token}`
-  //             }
-  //         })
-  //         console.log("book fine updated");
-  //     }
-
-  //     catch (e) {
-  //         console.log(e);
-  //     }
-  // }
+  
 
   const addbook = async (book) => {
     try {

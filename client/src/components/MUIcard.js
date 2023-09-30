@@ -20,7 +20,8 @@ export default function MediaControlCard({ data, returnFn }) {
   const checkDate = (book) => {
     const due_arr = book.dueDate.split("/");
 
-    const dueDate = new Date(due_arr[2], due_arr[1] - 1, due_arr[0]); //yyyy,mm,dd
+    //yyyy,mm,dd
+    const dueDate = new Date(due_arr[2], due_arr[1] - 1, due_arr[0]); 
     const dateToday = new Date();
 
     if (dateToday >= dueDate) return true;
@@ -32,7 +33,6 @@ export default function MediaControlCard({ data, returnFn }) {
   const pathname = "/dashboard/viewBooks/bookDetails";
 
   return (
-    // onClick={() => navigate("/dashboard/read/bookDetails", { state: data })}
     <Card sx={{ display: "flex", cursor: "pointer" }} className="muicard">
       <Box
         sx={{ display: "flex", flexDirection: "column" }}
@@ -62,7 +62,6 @@ export default function MediaControlCard({ data, returnFn }) {
           >
             Due Date:&nbsp; {data.dueDate}
           </Typography>
-          {/* color="success" */}
           <Button
             variant="contained"
             className="return-btn"
@@ -71,18 +70,6 @@ export default function MediaControlCard({ data, returnFn }) {
             Return
           </Button>
         </CardContent>
-
-        {/* <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-                    <IconButton aria-label="previous">
-                        {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
-                    </IconButton>
-                    <IconButton aria-label="play/pause">
-                        <PlayArrowIcon sx={{ height: 38, width: 38 }} />
-                    </IconButton>
-                    <IconButton aria-label="next">
-                        {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
-                    </IconButton>
-                </Box> */}
       </Box>
       <CardMedia
         className="cardMedia"

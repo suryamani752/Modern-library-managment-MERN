@@ -2,12 +2,10 @@
 
 .bookNav{
     padding: 10px 6px 2px 6px !important;
-    /* padding-top: 14px !important; */
     border-radius: 0.35rem ;
     margin-left: -10px !important;
     margin-bottom: 2rem;
     margin-top: 0.28rem;
-    /* font-family: "Montserrat", sans-serif !important; */
 }
 .bookNav h4{
     font-family: 'Amiri', serif !important;
@@ -49,4 +47,3 @@ td button:hover{
         margin-left: 0px !important;
     }
 }
-/* Books Read Page */

@@ -19,12 +19,10 @@ export const BookDetails = () => {
     getIssueBooks,
   } = useContext(AuthContext);
   const [btnValue, setBtnValue] = useState("Issue Book");
-  // const { addToast } = useToasts();
 
   useEffect(async () => {
     await getIssueBooks();
 
-    // console.log(location.state.isbn);
     const response = await axios.get(`/searchby/isbn/${location.state.isbn}`, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -35,12 +33,13 @@ export const BookDetails = () => {
     let flag = 0;
     issue.every((book) => {
       if (book.isbn == location.state.isbn) {
-        flag = 1; //book is already issued
+        
+        //book is already issued
+        flag = 1; 
         return false;
       }
       return true;
     });
-    // console.log("flag = " + flag);
 
     if (response.data[0].copies < 1) {
       console.log("btn value changed");
@@ -55,18 +54,14 @@ export const BookDetails = () => {
 
   const issueFunc = () => {
     if (btnValue === "Issued") {
-      // addToast('Book is already issued', { appearance: 'error' });
       toast.error("Book is already issued");
     } else if (btnValue === "Max out") {
-      // addToast('Book is already issued', { appearance: 'error' });
       toast.error("Exceeding issue limit");
     } else {
       issueBooks(location.state);
       setBtnValue("Issued");
-      // addToast('Book issued', { appearance: 'success' });
       toast.success("Book issued");
-      // setBtnValue('Not available');
-      // setBtnColor('btn--change');
+      
     }
   };
 
@@ -76,9 +71,7 @@ export const BookDetails = () => {
 
     navigate("/dashboard/viewBooks");
     if (resData === "Book deleted successfully")
-      // addToast(resData, { appearance: 'success' });
       toast.success(resData);
-    // addToast(resData, { appearance: 'error' });     //in case book is currently issued
     else toast.error(resData);
   };
 
@@ -130,7 +123,6 @@ export const BookDetails = () => {
                     <span className="copy">{location.state.copies}</span>
                   </p>
                 </div>
-                {/* <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p> */}
                 {role === "user" ? (
                   <>
                     <button
@@ -177,7 +169,6 @@ export const BookDetails = () => {
           </div>
         </div>
 
-        {/* </div> */}
       </div>
     </>
   );

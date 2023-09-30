@@ -8,7 +8,6 @@ export default function SignupCard() {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
-  // const { addToast } = useToasts();
   const navigate = useNavigate();
 
   const signup = async (props) => {

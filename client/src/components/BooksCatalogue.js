@@ -11,7 +11,6 @@ import youngAdultBn from "../images/bookheaders/youngAdult.jpg";
 import { BooksPanel } from "./booksPanel";
 
 export default function BooksCatalogue() {
-  // const { addToast } = useToasts();
   const [option, setOption] = React.useState("name");
   const [value, setValue] = React.useState("Search By");
   const [searchValue, setSearchValue] = React.useState("");
@@ -33,20 +32,15 @@ export default function BooksCatalogue() {
   //to set search params
   const params = [[`${option}`, `${searchValue}`]];
   const pathname = "/dashboard/viewBooks/search";
-  // const obj = { option: `${option}`, value: `${value}`, searchValue: `${searchValue}` };  //obj for useLocation
 
   const searchHandler = (e) => {
     e.preventDefault();
-    // if (option === 'Search By') {
-    //     addToast('Please select a search option', { appearance: 'error' });
-    //     return true;
-    // }
+    
 
     searchbook(option, searchValue);
     navigate(`${pathname}?${createSearchParams(params)}`);
   };
 
-  // console.log(role);
 
   React.useEffect(async () => {
     await getBooks("Fiction");
@@ -55,22 +49,15 @@ export default function BooksCatalogue() {
     await getBooks("Horror");
     await getBooks("Mystery");
     await getBooks("Young Adult");
-    // await getRequestedBooks();
-
-    // getFine();
-    // console.log(token + " " + role);
-    // return () => {
-    console.log("Books loaded");
-    // }
+    
+    // console.log("Books loaded");
   }, []);
 
   return (
     <>
       <div className="main-container">
-        {/* NAVBAR */}
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid">
-            {/* <a className="navbar-brand" href="#">Navbar</a> */}
             <button
               className="navbar-toggler"
               type="button"
@@ -126,7 +113,6 @@ export default function BooksCatalogue() {
                         Author
                       </a>
                     </li>
-                    {/* <li><a className="dropdown-item" href="#" onClick={() => setOption('Category')}>Category</a></li> */}
                   </ul>
                 </li>
               </ul>
@@ -143,11 +129,9 @@ export default function BooksCatalogue() {
                 </button>
               </form>
             </div>{" "}
-            {/*collapsible div */}
           </div>
         </nav>
 
-        {/* inner-container */}
 
         <div className="inner-container">
           <BooksPanel
@@ -166,7 +150,6 @@ export default function BooksCatalogue() {
           <BooksPanel data={fantasy} title="Fantasy" panelBanner={fantasyBn} />
         </div>
       </div>{" "}
-      {/*main-container*/}
     </>
   );
 }

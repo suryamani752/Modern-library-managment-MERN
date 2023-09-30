@@ -36,11 +36,7 @@ export const RequestStatus = () => {
     <>
       <div className="main-container">
         <a href="https://storyset.com/data"></a>
-        {/* <nav className="navbar navbar-expand-lg navbar-dark bg-dark bookNav">
-                    <div className="container-fluid">
-                        <h4 style={{ color: 'whitesmoke' }}>Request Status</h4>
-                    </div>
-                </nav> */}
+        
         <div className="row justify-content-center mx-auto mb-3 ">
           <h2 className="reqHeader">Request Status</h2>
         </div>

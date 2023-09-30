@@ -4,16 +4,7 @@
 	box-sizing: border-box;
 }
 
-/* body {
-	background: #f6f5f7;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
-	margin: -20px 0 50px;
-} */
+
 
 .homeh1 {
 	font-weight: bold;
@@ -22,16 +13,13 @@
 }
 .homeh1.extra{
     color: #B35042;
-    /* font-family: 'Mulish', sans-serif !important; */
     font-family: 'Hind', sans-serif !important;
 }
 .lib{
-    /* margin-top: -10px; */
     line-height: 57px;
     letter-spacing: 1.5px !important;
 }
 .signup-link{
-    /* color: #262626; */
     color: #121314 !important;
     margin-top: 22px !important;
     text-align: center;
@@ -58,17 +46,7 @@
 	letter-spacing: 0.5px;
 	margin: 20px 0 30px;
 }
-/* 
-span {
-	font-size: 12px;
-} */
 
-/* a {
-	color: #333;
-	font-size: 14px;
-	text-decoration: none;
-	margin: 15px 0;
-} */
 
 .homeBtn {
 	border-radius: 25px;
@@ -104,14 +82,12 @@ span {
 	border-color: #121314;
     color: whitesmoke;
     width: auto !important;
-    /* margin-top: 0.5rem !important; */
 }
 .homeBtn.ghost.upBtn{
     margin-left: -95px;
 }
 .homeBtn.ghost.lgnBtn{
     margin-left: 105px;
-    /* margin-top: -10px; */
 }
 .libText{
     margin-left: 125px;
@@ -126,8 +102,7 @@ span {
 	flex-direction: column;
 	padding: 0 0px;
 	height: 100%;
-    /* border-radius: 1rem; */
-    /* margin: 2rem !important; */
+    
     box-sizing: border-box;
 	text-align: center;
     background-color: white;
@@ -136,13 +111,7 @@ span {
 }
 
 
-/* input {
-	background-color: #eee;
-	border: none;
-	padding: 12px 15px;
-	margin: 8px 0;
-	width: 100%;
-} */
+
 .form-container .field{
     height: 45px;
     width: 80%;
@@ -180,14 +149,12 @@ span {
     font-size: 16px;
     color: #B35042;
     background: white;
-    /* border-radius: 0.6rem; */
     padding: 0.1rem 0.5rem;
     transform: translateY(-50%);
   }
 .homecontainer {
 	background-color: #f9ecec;
-	/* border-radius: 10px; */
-    /* rgb(255,245,235) #f5eeee*/
+	
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
@@ -216,7 +183,6 @@ span {
 
 .sign-up-container {
 	left: 0;
-    /* right: 0; */
 	width: 45%;
 	opacity: 0;
 	z-index: 1;
@@ -257,11 +223,9 @@ span {
 }
 
 .overlay {
-	/* background: #121314; */
-    /* background-image: linear-gradient(to left top, #f7f3fe, #ffedf8, #ffe7e8, #ffe6d3, #f9eac4); */
+	
     background-color: #f9ecec;
-	/* background: -webkit-linear-gradient(to right, #F0F2F0, #121314); */
-	/* background: linear-gradient(to right, #F0F2F0, #121314); */
+	
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;

@@ -3,7 +3,6 @@ import noDataImg from "../images/bookheaders/norecordfound.png";
 import HistoryGrid from "./HistoryGrid";
 
 export const BooksRead = () => {
-  // const books = [{ "_id": { "$oid": "6245cc6cea525e229c4cef5e" }, "image": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7807/9781780722405.jpg", "name": "The 8-week Blood Sugar Diet", "author": "Michael Mosley", "book_depository_stars": { "$numberInt": "4" }, "isbn": { "$numberLong": "9781780722405" }, "category": "Medical", "copies": "5" }]
   const books = null;
 
   return (
@@ -33,24 +32,24 @@ export const BooksRead = () => {
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>milk and honey</td>
-                <td>Rupi Kaur</td>
-                <td>14-04-22</td>
-                <td>28-04-22</td>
+                <td>HTML</td>
+                <td>Suryamani Kumar</td>
+                <td>01/09/2023</td>
+                <td>06/09/2023</td>
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>milk and honey</td>
-                <td>Rupi Kaur</td>
-                <td>14-04-22</td>
-                <td>28-04-22</td>
+                <td>HTML</td>
+                <td>Suryamani Kumar</td>
+                <td>01/09/2023</td>
+                <td>06/09/2023</td>
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td>milk and honey</td>
-                <td>Rupi Kaur</td>
-                <td>14-04-22</td>
-                <td>28-04-22</td>
+                <td>HTML</td>
+                <td>Suryamani Kumar</td>
+                <td>01/09/2023</td>
+                <td>06/09/2023</td>
               </tr>
             </tbody>
           </table>

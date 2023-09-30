@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "../api/axios";
 import { AuthContext } from "../context/authProvider";
 import "../css/homepg.css";
-// import Typewriter from "typewriter-effect";
+import Typewriter from "typewriter-effect";
 
 // const port = process.env.PORT || 8080;
 
@@ -169,13 +169,13 @@ export const Home = () => {
           <div className="overlay">
             <div className="overlay-panel overlay-left">
               <h1 className="homeh1">
-                {/* <Typewriter
+                <Typewriter
                   options={{
                     strings: ["Welcome","Back"],
                     autoStart: true,
                     loop: true,
                   }}
-                /> */}
+                />
                 Welcome Back
               </h1>
               <p className="homepara">
@@ -210,13 +210,13 @@ export const Home = () => {
             </div>
             <div className="overlay-panel overlay-right">
               <h1 className="homeh1">
-                {/* <Typewriter
+                <Typewriter
                   options={{
                     strings: ["Hello", "Friends"],
                     autoStart: true,
                     loop: true,
                   }}
-                /> */}
+                />
                 Hello Friends
               </h1>
               <p className="homepara">

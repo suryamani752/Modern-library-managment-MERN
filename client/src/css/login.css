@@ -18,14 +18,7 @@
     margin-right: 120px;
 
   }
-  /* html,body{
-    display: grid;
-    height: 100%;
-    width: 100%;
-    place-items: center;
-    background: #f2f2f2;
-    /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
-   */
+  
   ::selection{
     background: #4158d0;
     color: #fff;
@@ -35,12 +28,9 @@
     background: transparent;
     border-radius: 15px;
     box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
-    /* float: right; */
     right: 2px;
     z-index: 2 !important;
     top: 10vh;
-    /* margin-right: 10px; */
-    /* margin-top: 15px; */
     position: absolute !important;
   }
 

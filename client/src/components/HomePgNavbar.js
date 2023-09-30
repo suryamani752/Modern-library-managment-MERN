@@ -47,7 +47,6 @@ export function HomePgNavbar() {
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                {/* <Link classNameName="btn btn-primary me-2" to="/login">Login</Link> */}
                 <button
                   className="btn btn-dark me-2 lib2"
                   onClick={loginToggle}
@@ -57,7 +56,6 @@ export function HomePgNavbar() {
               </li>
 
               <li className="nav-item">
-                {/* <Link classNameName="btn btn-primary" to="/signup">SignUp</Link> */}
                 <button className="btn btn-dark lib3" onClick={signupToggle}>
                   SignUp
                 </button>

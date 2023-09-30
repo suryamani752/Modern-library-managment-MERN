@@ -5,34 +5,23 @@ import { AuthContext } from "../context/authProvider";
 import noDataImg from "../images/bookheaders/norecordfound.png";
 
 export const SearchBook = (props) => {
-  // const { addToast } = useToasts();
   const location = useLocation();
-  // console.log(location);
   const navigate = useNavigate();
   const [value, setValue] = React.useState(`Search By`);
   const [option, setOption] = React.useState(`name`);
   const [searchValue, setSearchValue] = React.useState("");
   const { searchbook, results } = React.useContext(AuthContext);
 
-  // console.log("--->" + option, value, searchValue);
-  // console.log(results);
-
   //to set search params
   const params = [[`${option}`, `${searchValue}`]];
   const pathname = "/dashboard/viewBooks/search";
-  // const obj = { option: `${option}`, value: `${value}`, searchValue: `${searchValue}` };  //obj for useLocation
 
   const searchHandler = (e) => {
     e.preventDefault();
-    // if (option === 'Search By') {
-    //     addToast('Please select a search option', { appearance: 'error' });
-    //     return true;
-    // }
 
     //searchbook api
     searchbook(option, searchValue);
 
-    // console.log(results.length);
     navigate(`${pathname}?${createSearchParams(params)}`);
   };
 
@@ -43,10 +32,8 @@ export const SearchBook = (props) => {
   return (
     <>
       <div className="main-container">
-        {/* NAVBAR */}
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid">
-            {/* <a className="navbar-brand" href="#">Navbar</a> */}
             <button
               className="navbar-toggler"
               type="button"
@@ -102,7 +89,6 @@ export const SearchBook = (props) => {
                         Author
                       </a>
                     </li>
-                    {/* <li><a className="dropdown-item" href="#" onClick={() => setOption('Category')}>Category</a></li> */}
                   </ul>
                 </li>
               </ul>
@@ -120,11 +106,8 @@ export const SearchBook = (props) => {
                 </button>
               </form>
             </div>{" "}
-            {/*collapsible div */}
           </div>
         </nav>
-
-        {/* inner-container */}
 
         <div className="inner-container">
           {results.length === 0 ? (
@@ -136,7 +119,6 @@ export const SearchBook = (props) => {
           )}
         </div>
       </div>{" "}
-      {/*main-container*/}
     </>
   );
 };
