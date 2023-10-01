@@ -171,12 +171,11 @@ export const Home = () => {
               <h1 className="homeh1">
                 <Typewriter
                   options={{
-                    strings: ["Welcome","Back"],
+                    strings: ["Welcome Back"],
                     autoStart: true,
                     loop: true,
                   }}
                 />
-                Welcome Back
               </h1>
               <p className="homepara">
                 To keep connected with us please login with your personal info
@@ -212,12 +211,11 @@ export const Home = () => {
               <h1 className="homeh1">
                 <Typewriter
                   options={{
-                    strings: ["Hello", "Friends"],
+                    strings: ["Hello Friends"],
                     autoStart: true,
                     loop: true,
                   }}
                 />
-                Hello Friends
               </h1>
               <p className="homepara">
                 Enter your personal details and start journey with us
