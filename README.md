@@ -1,6 +1,4 @@
 # Modern-library-managment-MERN
-
-<h3> if you want to see this project live then please click here 👉 <a href="https://modern-library-managment-mern.vercel.app/">Modern Library</a></h3>
 <h3> Please have a look at my portfolio 👉 <a href="https://portfolio-suryamani-kumar-byj5.onrender.com/">Portfolio</a></h3>
 
 ## To Run this project you will have to follow these steps :
